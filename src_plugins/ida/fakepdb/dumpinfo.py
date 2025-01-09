@@ -880,6 +880,10 @@ class DumpInfo():
             elif ida_bytes.is_data(flags):
                 type = 'data'
 
+
+            if ida_entry.get_entry_name(ordinal) is None:
+                continue
+
             export = {
                 'ordinal'           : ordinal,
                 'rva'               : ea - self._base,
