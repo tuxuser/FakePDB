@@ -33,6 +33,7 @@ find_package(LLVM REQUIRED CONFIG)
 #
 
 if (MSVC)
+    add_compile_definitions(_DISABLE_CONSTEXPR_MUTEX_CONSTRUCTOR)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
     add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)
     add_compile_definitions(__STDC_WANT_SECURE_LIB__=1)
